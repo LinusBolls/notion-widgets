@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+    <div js-data="people"></div>
+    <script>
+
+        async function main() {
+            const res = await fetch("https://raw.githack.com/linusbolls/notion-widgets/master/Knowledge%20Space-People-db.json", { headers: { "Access-Control-Allow-Origin": "*" } })
+
+            const data = await res.json()
+
+            document.querySelector("[js-data='people']").innerHTML = JSON.stringify(data, null, 2)
+        }
+        // document.addEventListener("load", main)
+        main()
+
+    </script>
+</body>
+
+</html>
