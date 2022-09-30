@@ -3,24 +3,35 @@
 
 <head>
 
+    <!-- <script id="data" type="application/json"
+        src="https://raw.githack.com/LinusBolls/notion-widgets/master/Knowledge%20Space-People-db.json"></script> -->
+
+    <script id="data" type="application/json"
+        src="https://raw.githack.com/LinusBolls/notion-widgets/master/data.js"></script>
 </head>
 
 <body>
 
     <div js-data="people"></div>
-    <script>
+
+
+
+
+    <!-- <script>
 
         async function main() {
-            const res = await fetch("https://raw.githack.com/linusbolls/notion-widgets/master/Knowledge%20Space-People-db.json", { headers: { "Access-Control-Allow-Origin": "*" } })
+            // const res = await fetch("https://raw.githack.com/LinusBolls/notion-widgets/master/Knowledge%20Space-People-db.json", { headers: { "Access-Control-Allow-Origin": "*" } })
 
-            const data = await res.json()
+            // const data = await res.json()
+
+            const ding = JSON.parse(document.getElementById('data').textContent || "{}");
 
             document.querySelector("[js-data='people']").innerHTML = JSON.stringify(data, null, 2)
         }
         // document.addEventListener("load", main)
         main()
 
-    </script>
+    </script> -->
 </body>
 
 </html>
